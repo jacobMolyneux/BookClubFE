@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Nav } from 'react-bootstrap';
+import {Homepage} from './pages/homepage.js'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav className = 'border-bottom d-flex justify-content-between'>
+        <div className ='d-flex'>
+        <Nav.Item className ='m-3'>Home</Nav.Item>
+        <Nav.Item className ='m-3'>Trending</Nav.Item>
+        </div>
+        <h1>Book Club</h1>
+        <div className ='d-flex'>
+          <Nav.Item className ='m-3'>Log In</Nav.Item>
+          <Nav.Item className ='m-3'>Create Account</Nav.Item>
+        </div>
+      </Nav>
+     <Homepage/>
     </div>
   );
 }
